@@ -215,7 +215,7 @@ class VlcPlayerController extends ValueNotifier<VlcPlayerValue> {
             playingState: PlayingState.buffering,
             errorDescription: VlcPlayerValue.noError,
           );
-           break;
+          break;
         case VlcMediaEventType.paused:
           value = value.copyWith(
             isPlaying: false,
@@ -297,6 +297,7 @@ class VlcPlayerController extends ValueNotifier<VlcPlayerValue> {
             playingState: PlayingState.error,
             errorDescription: VlcPlayerValue.unknownError,
           );
+          break;
         case VlcMediaEventType.unknown:
           break;
       }
@@ -326,6 +327,7 @@ class VlcPlayerController extends ValueNotifier<VlcPlayerValue> {
             event.rendererId,
             event.rendererName,
           );
+          break;
         case VlcRendererEventType.unknown:
           break;
       }
